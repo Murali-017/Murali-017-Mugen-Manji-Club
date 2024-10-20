@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugen Manji | Japanese Language Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #000;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-container img {
+            max-height: 50px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo-container img:hover {
+            transform: rotate(360deg);
+        }
+
+        nav .logo-container h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+            transform: translateY(-5px);
+        }
+
+        section {
+            display: none;
+            padding: 4rem 2rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        #home {
+            display: block;
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #333;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="Mugen Manji Logo">
+            <h1>Mugen Manji</h1>
+        </div>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About Us</a></li>
+            <li><a href="#" onclick="showSection('members')">Members</a></li>
+            <li><a href="#" onclick="showSection('activities')">Activities</a></li>
+            <li><a href="#" onclick="showSection('join')">Join Us</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <div class="content">
+            <h2>Welcome to Mugen Manji</h2>
+            <p>Your gateway to mastering the Japanese language and diving deep into Japan's rich culture. Join us and begin your journey to explore a world full of traditions and language excellence.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Mugen Manji is a Japanese language club offering engaging lessons, workshops, and cultural events. We are dedicated to making Japanese learning fun and immersive, helping you explore the beauty of Japan's language and traditions.</p>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members">
+        <div class="content">
+            <h2>Our Members</h2>
+            <p>We are proud to have a vibrant and diverse community of members who are passionate about learning the Japanese language and exploring its culture.</p>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="content">
+            <h2>Activities and Events</h2>
+            <ul>
+                <li>Beginner Language Workshop – November 15th, 2024</li>
+                <li>Tanabata Festival Celebration – December 1st, 2024</li>
+                <li>Japanese Calligraphy Workshop – December 10th, 2024</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Join Us Section with Embedded Google Form -->
+    <section id="join">
+        <div class="content">
+            <h2>Join Us</h2>
+            <p>Fill in your details below to become a member of the Mugen Manji club!</p>
+            <!-- Updated Google Form Iframe -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4VWvE2lhTcrLPbyzvv8sqraV1HT9mnFMU3o_5FanP_sNMhg/viewform?embedded=true" width="640" height="991" frameborder="0" marginheight="0" marginwidth="0" style="border:none;">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Email: info@mugenmanji.com</p>
+            <p>Phone: +91 XXXXXXXX</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mugen Manji | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript to toggle sections with smooth scrolling and fade-in effect -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active'); // Remove active class from all sections
+                section.style.display = 'none'; // Hide all sections
+            });
+
+            // Show and fade in the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+            setTimeout(() => {
+                selectedSection.classList.add('active'); // Add fade-in effect
+            }, 50);
+        }
+    </script>
+</body>
+</html>
